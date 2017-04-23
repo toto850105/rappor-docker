@@ -9,5 +9,5 @@ Get start
 
 Rstudio server
 ---
-The server is on port 8787
-User rstudio:rstudio to login in
+The server is on port 8787    
+Use rstudio:rstudio to login in
