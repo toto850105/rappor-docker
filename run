@@ -1,0 +1,4 @@
+#!/bin/bash
+# set -x
+
+R --vanilla --slave -e "shiny::runApp('apps/rappor-analysis/', host='0.0.0.0', port=6789)" | R --vanilla --slave -e "shiny::runApp('apps/rappor-sim/', host='0.0.0.0', port=6788)"
