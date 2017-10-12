@@ -5,9 +5,8 @@ ADD setup setup.sh
 RUN apt-get update && apt-get install -yqq wget curl git gfortran-4.8 vim g++-4.8 openssl build-essential r-cran-ggplot2 gcc-4.8 libssl-dev protobuf-compiler libprotobuf-dev libapparmor1 psmisc zsh nano
 
 # Install rstudio server
-ENV rstudio-server_version 1.1.383
-RUN wget https://download2.rstudio.org/rstudio-server-${rstudio-server_version}-amd64.deb \
-	&& dpkg -i rstudio-server-${rstudio-server_version}-amd64.deb \
+RUN wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb \
+	&& dpkg -i rstudio-server-1.1.383-amd64.deb \
 	&& apt-get -f install -y \
 	&& rm *.deb \
 	&& useradd -m rstudio \
